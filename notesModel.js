@@ -1,6 +1,13 @@
 class NotesModel {
-  getNotes() {
-    return [];
+
+  constructor() {
+    this.notes = [];
+  }
+  getNotes() { 
+    return this.notes;
+  }
+  addNote(note) {
+    this.notes.push(note)
   }
 }
 
