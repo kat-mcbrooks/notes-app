@@ -17,6 +17,9 @@
         addNote(note) {
           this.notes.push(note);
         }
+        setNotes(notes) {
+          this.notes = notes;
+        }
         reset() {
           this.notes = [];
         }
@@ -59,12 +62,31 @@
     }
   });
 
+  // NotesApi.js
+  var require_NotesApi = __commonJS({
+    "NotesApi.js"(exports, module) {
+      var NotesApi2 = class {
+        loadNotes(callback) {
+          fetch("http://localhost:3000/notes").then((response) => response.json()).then((data) => {
+            callback(data);
+          });
+        }
+      };
+      module.exports = NotesApi2;
+    }
+  });
+
   // index.js
   var NotesModel = require_notesModel();
   var NotesView = require_NotesView();
+  var NotesApi = require_NotesApi();
+  var api = new NotesApi();
   var model = new NotesModel();
-  var view = new NotesView(model);
-  console.log("The Notes app is running");
+  var view = new NotesView(model, api);
+  api.loadNotes((notes) => {
+    model.setNotes(notes);
+    view.displayNotes();
+  });
   view.displayNotes();
   console.log(model.getNotes());
 })();
