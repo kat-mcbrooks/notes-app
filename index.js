@@ -9,7 +9,7 @@ const NotesView = require('./NotesView')
 const NotesApi = require('./NotesApi')
 
 const api = new NotesApi();
-const model = new NotesModel;
+const model = new NotesModel();
 const view = new NotesView(model, api);
 
 api.loadNotes((notes) => { //notes is an array that has been retrieved from server via the loadNotes and fetch method
@@ -17,5 +17,5 @@ api.loadNotes((notes) => { //notes is an array that has been retrieved from serv
   view.displayNotes();
 });
 
-view.displayNotes();
+//view.displayNotes();
 console.log(model.getNotes());

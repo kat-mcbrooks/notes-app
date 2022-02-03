@@ -32,8 +32,9 @@
   var require_NotesView = __commonJS({
     "NotesView.js"(exports, module) {
       var NotesView2 = class {
-        constructor(model2) {
+        constructor(model2, api2) {
           this.model = model2;
+          this.api = api2;
           this.maincontainerEl = document.querySelector("#main-container");
           document.querySelector("#add-note-button").addEventListener("click", () => {
             const newNote = document.querySelector("#note-input").value;
@@ -87,6 +88,5 @@
     model.setNotes(notes);
     view.displayNotes();
   });
-  view.displayNotes();
   console.log(model.getNotes());
 })();
