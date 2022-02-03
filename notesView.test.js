@@ -33,6 +33,15 @@ describe(NotesView, () => {
     const buttonEl = document.querySelector("#add-note-button");
     buttonEl.click();
 
+    const inputEl2 = document.querySelector("#note-input");
+    inputEl2.value = "This is also a supremely fabulous note";
+    const buttonEl2 = document.querySelector("#add-note-button");
+    buttonEl2.click();
+
     expect(document.querySelector('div.note').innerText).toBe("This is a supremely fabulous note");
+    expect(document.querySelectorAll('div.note').length).toEqual(2);
   });
+
+
+
 })
