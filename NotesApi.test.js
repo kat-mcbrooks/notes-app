@@ -1,4 +1,4 @@
-const NotesApi = require('./NotesApi')
+const NotesApi = require('./notesApi')
 require('jest-fetch-mock').enableMocks()
 
 describe('NotesApi class', () => {

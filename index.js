@@ -5,8 +5,8 @@
 // on Mac (using Chrome), use Option+Command+J to open the console and see this message.
 
 const NotesModel = require('./notesModel')
-const NotesView = require('./NotesView')
-const NotesApi = require('./NotesApi')
+const NotesView = require('./notesView')
+const NotesApi = require('./notesApi')
 
 const api = new NotesApi();
 const model = new NotesModel();

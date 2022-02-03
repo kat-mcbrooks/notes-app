@@ -28,9 +28,9 @@
     }
   });
 
-  // NotesView.js
-  var require_NotesView = __commonJS({
-    "NotesView.js"(exports, module) {
+  // notesView.js
+  var require_notesView = __commonJS({
+    "notesView.js"(exports, module) {
       var NotesView2 = class {
         constructor(model2, api2) {
           this.model = model2;
@@ -63,9 +63,9 @@
     }
   });
 
-  // NotesApi.js
-  var require_NotesApi = __commonJS({
-    "NotesApi.js"(exports, module) {
+  // notesApi.js
+  var require_notesApi = __commonJS({
+    "notesApi.js"(exports, module) {
       var NotesApi2 = class {
         loadNotes(callback) {
           fetch("http://localhost:3000/notes").then((response) => response.json()).then((data) => {
@@ -79,8 +79,8 @@
 
   // index.js
   var NotesModel = require_notesModel();
-  var NotesView = require_NotesView();
-  var NotesApi = require_NotesApi();
+  var NotesView = require_notesView();
+  var NotesApi = require_notesApi();
   var api = new NotesApi();
   var model = new NotesModel();
   var view = new NotesView(model, api);
