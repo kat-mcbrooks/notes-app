@@ -2,9 +2,6 @@
 
 To ensure that the notes can be fetched from the backend server ('http://localhost:3000/notes'), makesure you have the [notes backend server files downloaded](https://github.com/makersacademy/javascript-web-applications/blob/main/resources/notes-backend-server.zip) and running (i.e. run node index.js in a separate terminal).
 
-![esbuild diagram](./images/build-process-diagram.png)
-![esbuild diagram](./images/esbuild-bundle-diagram.svg)
-
 ## Fetch Diagram
 
 This diagram recapitulates how the previous exercise works, using `fetch` to
@@ -22,3 +19,8 @@ index.js
 * the main file which requires the source files
 index.html
 * the main file which requires the source files
+
+## esbuild process diagrams and file structures:
+
+![esbuild diagram](./images/build-process-diagram.png)
+![esbuild diagram](./images/esbuild-bundle-diagram.svg)
