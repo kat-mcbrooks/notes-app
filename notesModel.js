@@ -11,7 +11,6 @@ class NotesModel {
   }
   setNotes(notes) { // this should be passed the notes coming from the server
     this.notes = notes;
-    // do something!
   }
 
   reset() {

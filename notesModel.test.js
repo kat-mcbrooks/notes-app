@@ -6,7 +6,7 @@ beforeEach(() => {
 });
 
 describe(NotesModel, () => {
-  it('returns an empty array', () => {
+  it('begins with an empty notes array', () => {
     expect(model.getNotes()).toEqual([]);
   });
   it('adds a note', () => {
