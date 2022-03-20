@@ -1,8 +1,6 @@
 # Notes App
 
-Make sure you also have the notes-backend-server files downloaded and running i.e. node index.js
-![esbuild diagram](./images/build-process-diagram.png)
-![esbuild diagram](./images/esbuild-bundle-diagram.png)
+To ensure that the notes can be fetched from the backend server ('http://localhost:3000/notes'), makesure you have the [notes backend server files downloaded](https://github.com/makersacademy/javascript-web-applications/blob/main/resources/notes-backend-server.zip) and running (i.e. run node index.js in a separate terminal).
 
 ## Fetch Diagram
 
@@ -21,3 +19,8 @@ index.js
 * the main file which requires the source files
 index.html
 * the main file which requires the source files
+
+## esbuild process diagrams and file structures:
+
+![esbuild diagram](./images/build-process-diagram.png)
+![esbuild diagram](./images/esbuild-bundle-diagram.svg)
